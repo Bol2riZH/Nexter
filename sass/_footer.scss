@@ -3,4 +3,48 @@
 .footer {
   background-color: base.$color-secondary;
   grid-column: full-start / full-end;
+  padding: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.nav {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  //display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+    font-family: base.$font-display;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+
+    transition: 0.2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    translate: 0 -3px;
+    background-color: rgba(white, 0.05);
+  }
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: base.$color-grey-light-2;
+  text-align: center;
 }
